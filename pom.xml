@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.Tyulenev.springboottest</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>springboottest</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
     <name>springbootTest</name>
     <description>Demo project for Spring Boot</description>
@@ -19,6 +19,7 @@
         <org.springframework-version>4.3.25.RELEASE</org.springframework-version>
         <org.aspectj-version>1.6.10</org.aspectj-version>
         <org.slf4j-version>1.7.6</org.slf4j-version>
+<!--        <logback.version>1.1.9</logback.version>-->
     </properties>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
@@ -156,6 +157,17 @@
             <version>4.3.11.Final</version>
             <scope>provided</scope>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-core</artifactId>-->
+<!--            <version>1.1.9</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>1.1.9</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

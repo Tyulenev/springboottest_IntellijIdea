@@ -10,32 +10,37 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl // implements EmployeeService
+{
 
     @Autowired
     private EmployeeDAO employeeDAO;
 
-    @Override
-    @Transactional //Spring открывает и закрывает транзакции
-    public List<Employee> getAllEmployees() {
-        return employeeDAO.getAllEmployees();
+    public List<Employee> getAllEmps() {
+        return (List<Employee>)employeeDAO.findAll();
     }
 
-    @Override
-    @Transactional
-    public void saveEmployee(Employee emp) {
-        employeeDAO.saveEmployee(emp);
-    }
-
-    @Override
-    @Transactional
-    public Employee getEmployee(int id) {
-        return employeeDAO.getEmployee(id);
-    }
-
-    @Override
-    @Transactional
-    public void deleteEmp(int id) {
-        employeeDAO.deleteEmp(id);
-    }
+//    @Override
+//    @Transactional //Spring открывает и закрывает транзакции
+//    public List<Employee> getAllEmployees() {
+//        return employeeDAO.getAllEmployees();
+//    }
+//
+//    @Override
+//    @Transactional
+//    public void saveEmployee(Employee emp) {
+//        employeeDAO.saveEmployee(emp);
+//    }
+//
+//    @Override
+//    @Transactional
+//    public Employee getEmployee(int id) {
+//        return employeeDAO.getEmployee(id);
+//    }
+//
+//    @Override
+//    @Transactional
+//    public void deleteEmp(int id) {
+//        employeeDAO.deleteEmp(id);
+//    }
 }

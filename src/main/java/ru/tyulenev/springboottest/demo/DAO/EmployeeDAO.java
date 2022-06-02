@@ -4,16 +4,13 @@ package ru.tyulenev.springboottest.demo.DAO;
 
 
 
+import org.springframework.data.repository.CrudRepository;
 import ru.tyulenev.springboottest.demo.entity.Employee;
 
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
-public interface EmployeeDAO {
-    public List<Employee> getAllEmployees();
+@PersistenceContext(unitName = "QoldTickets")
+public interface EmployeeDAO extends CrudRepository<Employee, Integer> {
 
-    public void saveEmployee(Employee emp);
-
-    public Employee getEmployee(int id);
-
-    public void deleteEmp(int id);
 }
