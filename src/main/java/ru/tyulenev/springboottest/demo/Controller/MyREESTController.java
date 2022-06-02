@@ -39,4 +39,9 @@ public class MyREESTController {
         employeeService.deleteEmp(id);
         return "Employee with id = " + id + " was deleted";
     }
+
+    @GetMapping("/test1")
+    public String test1 () {
+        return "test1 !!!!!";
+    }
 }
