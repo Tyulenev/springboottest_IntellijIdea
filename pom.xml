@@ -21,6 +21,10 @@
 <!--        <deploy.jboss.username>admin</deploy.jboss.username>-->
 <!--        <deploy.jboss.password>1holodecPRO</deploy.jboss.password>-->
     </properties>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+
+
     <dependencies>
 
         <dependency>
@@ -50,6 +54,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+<!--        Автоматич. обновление проекта-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>ch.qos.logback</groupId>-->

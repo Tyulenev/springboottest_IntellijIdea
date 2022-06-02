@@ -21,16 +21,22 @@ public class MyREESTController {
         return allEmpl;
     }
 
-//    @GetMapping("/employees/{id}")
-//    public Employee getEmployee(@PathVariable int id) {
-//        Employee emp = employeeService.getEmployee(id);
-//
-//        return emp;
-//    }
-//
-//    @PostMapping("/employees")
-//    public Employee addNewEmployee(@RequestBody Employee emp) {
-//        employeeService.saveEmployee(emp);
-//        return emp;
-//    }
+    @GetMapping("/employees/{id}")
+    public Employee getEmployee(@PathVariable int id) {
+        Employee emp = employeeService.getEmployee(id);
+
+        return emp;
+    }
+
+    @PostMapping("/add-employee")
+    public Employee addNewEmployee(@RequestBody Employee emp) {
+        employeeService.saveEmployee(emp);
+        return emp;
+    }
+
+    @DeleteMapping("/del-employee/{id}")
+    public String deleteEmps (@PathVariable int id) {
+        employeeService.deleteEmp(id);
+        return "Employee with id = " + id + " was deleted";
+    }
 }
